@@ -1,0 +1,12 @@
+{% extends 'teachers/base.html' %}
+
+{% block content %}
+    <h2>Teacher Import</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="csv_file">
+        <input type="file" name="zip_file">
+        <button type="submit">Import</button>
+    </form>
+    <!-- Add error handling and success messages here if needed -->
+{% endblock %}

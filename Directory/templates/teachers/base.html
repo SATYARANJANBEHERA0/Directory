@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Teacher Directory</title>
+    <!-- Add your CSS and other meta tags here -->
+    <link rel="stylesheet" href="{% static 'teachers/css/styles.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'teachers/js/custom.js' %}"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Teacher Directory</h1>
+    </header>
+    <nav>
+        <!-- Add navigation links here -->
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

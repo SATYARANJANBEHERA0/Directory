@@ -1,0 +1,13 @@
+{% extends 'teachers/base.html' %}
+
+{% block content %}
+    <h2>Teacher Details</h2>
+    <h3>{{ teacher.first_name }} {{ teacher.last_name }}</h3>
+    <img src="{{ teacher.profile_picture.url }}" alt="Profile Picture">
+    <p>Email: {{ teacher.email }}</p>
+    <p>Phone: {{ teacher.phone }}</p>
+    <p>Room Number: {{ teacher.room_number }}</p>
+    <p>Employee Number: {{ teacher.employee_number }}</p>
+    <p>Subjects Taught: {{ teacher.subjects_taught }}</p>
+    <!-- Add other teacher details here -->
+{% endblock %}

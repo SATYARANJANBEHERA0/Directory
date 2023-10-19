@@ -1,0 +1,27 @@
+{% extends 'teachers/base.html' %}
+
+{% block content %}
+    <h2>Teacher List</h2>
+    <ul>
+        {% for teacher in teachers %}
+            <li><a href="{% url 'teacher_detail' teacher.id %}">{{ teacher.first_name }} {{ teacher.last_name }}</a></li>
+        {% endfor %}
+    </ul>
+    <!-- Add filters and AJAX functionality here if needed -->
+    <select id="filter-by-last-name">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <!-- Add more options for each letter -->
+    </select>
+    
+    <select id="filter-by-subject">
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <!-- Add more options for subjects -->
+    </select>
+    
+    <div id="teacher-list">
+        <!-- Filtered teacher list will be displayed here -->
+    </div>
+    
+{% endblock %}
